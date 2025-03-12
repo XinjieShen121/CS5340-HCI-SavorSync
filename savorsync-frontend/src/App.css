@@ -1,0 +1,122 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FBE7D2;
+  color: #5D4037;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 650px;
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Header */
+header h1 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+/* AI Response Box */
+.api-box {
+  background-color: #FFF3E0;
+  border-radius: 10px;
+  padding: 20px;
+  max-height: 250px; /* ✅ Increased to fit more text */
+  overflow-y: auto; /* ✅ Enables vertical scrolling */
+  white-space: pre-wrap; /* ✅ Ensures line breaks are kept */
+  text-align: left; /* ✅ Aligns text for better readability */
+  width: 100%;
+  max-width: 600px; /* ✅ Adjust width as needed */
+}
+
+/* AI Message Button */
+.primary-btn {
+  background-color: #6D4C41;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background 0.2s;
+}
+
+.primary-btn:hover {
+  background-color: #543A32;
+}
+
+/* Trending Recipes */
+.trending-recipes {
+  margin-top: 30px;
+}
+
+.trending-recipes h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #D2691E;
+  text-transform: uppercase;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.recipe-card {
+  background-color: #FFAB91;
+  padding: 18px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.recipe-card:hover {
+  transform: scale(1.05);
+}
+
+/* Search Section */
+.search-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#recipe-search {
+  padding: 12px;
+  width: 75%;
+  border: 1px solid #5D4037;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-btn {
+  padding: 14px;
+  background-color: #D2691E;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 12px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.search-btn:hover {
+  background-color: #B85C1E;
+}
