@@ -21,9 +21,9 @@ app.get("/generate", async (req, res) => {
             model: "gpt-4o",  // Ensure this is a chat model
             messages: [
                 { role: "system", content: "You are an AI that provides cultural cooking insights." },
-                { role: "user", content: "Generate a 'Hello World' message with a cultural cooking theme." }
+                { role: "user", content: "Generate a 'Hello World' message with a cultural cooking theme under 100 words" }
             ],
-            max_tokens: 50,
+            max_tokens: 200,
         });
 
         // ✅ Correct way to access response content
