@@ -30,12 +30,12 @@ header h1 {
   background-color: #FFF3E0;
   border-radius: 10px;
   padding: 20px;
-  max-height: 250px; /* ✅ Increased to fit more text */
-  overflow-y: auto; /* ✅ Enables vertical scrolling */
-  white-space: pre-wrap; /* ✅ Ensures line breaks are kept */
-  text-align: left; /* ✅ Aligns text for better readability */
+  max-height: 250px; /*  Increased to fit more text */
+  overflow-y: auto; /*  Enables vertical scrolling */
+  white-space: pre-wrap; /*  Ensures line breaks are kept */
+  text-align: center; 
   width: 100%;
-  max-width: 600px; /* ✅ Adjust width as needed */
+  max-width: 600px; /*  Adjust width as needed */
 }
 
 /* AI Message Button */
@@ -89,32 +89,58 @@ header h1 {
   transform: scale(1.05);
 }
 
-/* Search Section */
+.cuisine-select {
+  width: 90%; /* ✅ Makes dropdown wider */
+  padding: 12px; /* ✅ Increases padding for better usability */
+  font-size: 18px; /* ✅ Increases font size */
+  border: 2px solid #D2691E;
+  border-radius: 8px;
+  background-color: #FFF3E0;
+  cursor: pointer;
+  position: relative; 
+}
+
+.cuisine-select:focus {
+  outline: none;
+  border-color: #B85C1E; /*  Highlight effect when clicked */
+}
+
+.cuisine-container {
+  position: relative; /*  Keeps dropdown inside a fixed container */
+  z-index: 10; /*  Ensures it appears above other elements */
+}
+
 .search-section {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  gap: 10px; /*  Adds space between dropdown & button */
   align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-#recipe-search {
-  padding: 12px;
-  width: 75%;
-  border: 1px solid #5D4037;
-  border-radius: 5px;
-  font-size: 16px;
+/* Fix the dropdown menu itself */
+.cuisine-select option {
+  font-size: 18px;  /* Increases text size */
+  padding: 12px;    /* Adds space for better visibility */
 }
 
+/* Ensure dropdown menu expands properly */
+.cuisine-select {
+  width: 100%; /*  Makes the dropdown full-width */
+  max-width: 300px; /*  Prevents it from getting too large */
+}
+
+
+/* Search Button */
 .search-btn {
-  padding: 14px;
+  padding: 12px 18px; /* ✅ Adjust padding for better button size */
   background-color: #D2691E;
   color: white;
   border: none;
   cursor: pointer;
-  margin-top: 12px;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
+  white-space: nowrap; /* ✅ Prevents text from wrapping */
 }
 
 .search-btn:hover {
