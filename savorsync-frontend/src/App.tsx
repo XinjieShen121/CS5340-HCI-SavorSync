@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Select from "react-select";
 import "./App.css";
 
@@ -92,7 +92,7 @@ function App() {
         />
         <button className="search-btn">🔍 Search Recipes</button>
       </section>
-      
+
       <section className="trending-recipes">
         <h2>🔥🔥🔥 Trending Cultural Recipes 🔥🔥🔥</h2>
         <div className="recipe-grid">
