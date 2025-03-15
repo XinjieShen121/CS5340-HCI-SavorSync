@@ -9,11 +9,7 @@ The project started as part of an **API integration assignment**, but instead of
 
 ## How It Works  
 
-SavorSync provides an **interactive cooking experience** with these features: 
-- **Animated Welcome Experience** – The homepage greets users with a typing effect to make it feel more dynamic.   
-- **Cultural Cooking Tips** – Click a button to receive a unique AI-generated “Hello World” welcome message with a cultural twist. These insights introduce world cuisines, traditional ingredients, or cooking customs, making food exploration more interactive and engaging.  
-- **Trending Recipes** – Discover popular cuisines like Asian, Italian, Mediterranean, and more.  
-- **Recipe Search** – Pick a cuisine from a dropdown and get recipes for that food style.  
+SavorSync makes exploring world cuisines fun and interactive. When you land on the homepage, you’re greeted with a smooth typing animation that sets the tone for your journey. A simple click on the Cultural Cooking Tips button generates an AI-powered “Hello World” message with a cultural twist, introducing you to traditional ingredients, cooking customs, or unique flavors from around the world. The Trending Recipes section highlights popular cuisines like Asian, Italian, and Mediterranean, while the Recipe Search feature allows you to browse dishes by selecting a cuisine from the dropdown menu
 
 The goal is to help people not just discover new dishes, but also understand the cultural significance behind them. In a world that’s becoming more connected, food is a way to bring people together. Learning about global cuisines through an interactive platform like SavorSync can help users develop a deeper appreciation for cultural diversity.
 
@@ -54,22 +50,13 @@ After adjusting these settings, the deployment was successful, and SavorSync wen
 ---
 
 ## Reflection: 
-This project was a valuable experience in building a full-stack application, integrating APIs, and solving real-world deployment issues.
+This mini coding assignment is a valuable experience in building a full-stack application, integrating APIs, and solving real-world deployment issues.
 
-Key Takeaways:
-	•	APIs add dynamic content – OpenAI’s API made it possible to generate unique cooking insights.
-	•	Frontend and backend communication is crucial – Debugging CORS errors was one of the biggest challenges.
-	•	Deployment requires proper setup – Netlify and Render each had specific settings that needed to be configured correctly.
+One of the biggest things I learned from this project is how APIs bring a website to life. Instead of just displaying static content, using OpenAI’s API allowed me to generate unique cuktural cooking insights on the fly, which made the experience feel more interactive. I also got hands-on experience with how the frontend and backend communicate, and I realized that even small errors in how they connect can break everything. Debugging CORS issues was a huge struggle—at first, my frontend couldn’t even talk to my own backend—but once I figured out how to configure headers and deployment settings, everything finally started working. Setting up Netlify and Render was also a learning curve since they each have their own quirks, but getting them to work together was super satisfying.
 
-Biggest Challenges:
-	•	Fixing CORS errors – Without CORS, the frontend couldn’t fetch data from the backend.
-	•	Handling AI responses – The AI sometimes returned long messages, which needed formatting.
-	•	Ensuring a smooth UI – Small details like adding a loading message made a big difference in usability.
+One of the most frustrating challenges was fixing CORS errors—I had no idea how much of a blocker that could be until my API just refused to connect. I had to tweak backend settings, redeploy multiple times, and test over and over before it finally worked. Another issue was handling AI responses—sometimes OpenAI would generate way too much text or include unnecessary phrases, so I had to clean up the responses to make them short and useful. I also realized that UI details matter a lot—at first, when users clicked the button, nothing happened right away, which made the app feel broken. Adding a simple “Generating…” message made a huge difference in making the experience feel smooth and professional.
 
-Future Improvements:
-	•	More cultural insights – AI could generate deeper stories behind each cuisine.
-	•	Saving favorite recipes – Users could bookmark meals they like.
-	•	Integrating a real-world recipe API – This would allow users to access detailed cooking instructions.
+If I were to take this project further, I’d love to add more cultural insights, like a short history of each dish instead of just quick cooking tips. It would also be great to let users save their favorite recipes, so they can come back to them later. Right now, most of the UI elements—like buttons and the navigation system—are just visually set up but not fully functional, except for the AI-generated cooking insights. Based on the user survey results, people wanted a more guided experience, which means the navigation page could be redesigned to help users explore not just cuisines, but also full recipe breakdowns. One of the biggest improvements would be connecting to a real recipe API, so users could get step-by-step cooking instructions rather than just general cultural insights. Right now, SavorSync is a fun way to learn about world food traditions, but with these additions, it could become an even better tool for helping people actually cook and experience global cuisine firsthand.
 
 What started as a simple “Hello World” API integration turned into an interactive global food discovery platform. It was exciting to see how different tools—React, Express, OpenAI, and Netlify—came together to build something meaningful.
 
@@ -77,16 +64,16 @@ What started as a simple “Hello World” API integration turned into an intera
 
 ## Running the Project Locally
 1. Clone the Repository:
-**git clone https://github.com/XinjieShen121/CS5340-HCI-SavorSync.git**
-**cd CS5340-HCI-SavorSync**
+• **git clone https://github.com/XinjieShen121/CS5340-HCI-SavorSync.git**
+• **cd CS5340-HCI-SavorSync**
 
 2. Start the Backend:
-**cd savorsync-api**
-**npm install**
-**node server.js**
+• **cd savorsync-api**
+• **npm install**
+• **node server.js**
 The API will run at http://localhost:3000/generate.
 
 3. Start the Frontend:
-**cd savorsync-frontend**
-**npm install**
-**npm run dev**
+• **cd savorsync-frontend**
+• **npm install**
+• **npm run dev**
