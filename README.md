@@ -80,7 +80,7 @@ The frontend is deployed on Netlify with the following configuration:
 - Build command: cd savorsync-frontend && npm install && npm run build
 - Publish directory: savorsync-frontend/dist
 
-The application is live at: **https://cs5340-hci-savorsync.netlify.app/**
+The application is live at: **https://cs5340-hci-savorsync-helloworld.netlify.app/**
 
 ---
 
