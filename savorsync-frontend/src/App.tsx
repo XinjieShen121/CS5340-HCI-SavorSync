@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Select from "react-select";
 import "./App.css";
 
 // Import images
@@ -20,55 +19,6 @@ const bbqPorkImage = "https://images.unsplash.com/photo-1544025162-d76694265947?
 // Update OpenAI API configuration
 const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
 const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
-
-// Sample recipe data
-const recipes = {
-  asian: [
-    {
-      id: 1,
-      name: "Ramen Noodle Soup",
-      description: "Traditional Japanese noodle soup with rich broth",
-      ingredients: ["Noodles", "Pork belly", "Soy sauce", "Eggs"],
-      instructions: ["Prepare broth", "Cook noodles", "Add toppings"],
-      culturalContext: "Japanese cuisine is known for its balance of flavors and textures. This dish is a classic example of Japanese simplicity and harmony.",
-      culturalStories: [
-        { step: 1, story: "The origins of ramen noodles can be traced back to China, where they were called 'Nong-Mian' or 'Pulled Noodles'." },
-        { step: 2, story: "The Japanese version of ramen noodles was introduced by Chinese immigrants in the early 20th century." },
-        { step: 3, story: "The traditional Japanese ramen soup is made with a rich pork bone broth." }
-      ],
-      substitutions: [
-        { ingredient: "Noodles", healthyOption: "Whole wheat noodles" },
-        { ingredient: "Pork belly", healthyOption: "Chicken" },
-        { ingredient: "Soy sauce", healthyOption: "Tamari" },
-        { ingredient: "Eggs", healthyOption: "Mushrooms" }
-      ]
-    },
-    // Add more Asian recipes
-  ],
-  mediterranean: [
-    {
-      id: 1,
-      name: "Greek Salad",
-      description: "Fresh and healthy Mediterranean salad",
-      ingredients: ["Cucumber", "Tomatoes", "Olives", "Feta cheese"],
-      instructions: ["Chop vegetables", "Mix ingredients", "Add dressing"],
-      culturalContext: "Greek cuisine is characterized by its use of fresh ingredients and simple cooking methods. This salad is a perfect representation of Greek simplicity and freshness.",
-      culturalStories: [
-        { step: 1, story: "The Greek salad is believed to have originated in the 5th century BC." },
-        { step: 2, story: "The Greeks used olive oil as their primary cooking oil." },
-        { step: 3, story: "The Greek salad is often served with olive oil, lemon juice, and salt." }
-      ],
-      substitutions: [
-        { ingredient: "Cucumber", healthyOption: "Zucchini" },
-        { ingredient: "Tomatoes", healthyOption: "Cherry tomatoes" },
-        { ingredient: "Olives", healthyOption: "Sun-dried tomatoes" },
-        { ingredient: "Feta cheese", healthyOption: "Cottage cheese" }
-      ]
-    },
-    // Add more Mediterranean recipes
-  ],
-  // Add other cuisine categories
-};
 
 // Recipe view modes type
 type ViewMode = 'minimalist' | 'story' | 'health' | 'authentic' | 'accessible';
@@ -512,7 +462,7 @@ const CulturalSpotlight = () => {
       image: mediterraneanFood,
       description: "Explore the centuries-old traditions behind the Mediterranean diet.",
       readTime: "4 min read",
-      videoUrl: null,
+      videoUrl: undefined,
       hasVideo: false
     },
     {
@@ -847,9 +797,6 @@ function App() {
   
   // State for main content animation
   const [displayText, setDisplayText] = useState("");
-  const [showMainContent, setShowMainContent] = useState(true);
-  
-  // State for recipe view
   const [selectedCuisine, setSelectedCuisine] = useState<string | null>(null);
   
   // Add new state for navigation
@@ -868,11 +815,6 @@ function App() {
   // Function to handle cuisine card clicks
   const handleCuisineClick = (cuisine: string) => {
     setSelectedCuisine(cuisine);
-  };
-
-  // Function to go back to main view
-  const handleBackClick = () => {
-    setSelectedCuisine(null);
   };
 
   // Function to handle dish selection
