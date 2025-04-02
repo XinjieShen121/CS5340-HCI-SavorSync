@@ -1,85 +1,122 @@
-# SavorSync: Interactive "Hello World" Cultural Cooking Experience
+# SavorSync: Interactive Cultural Cooking Experience
 
 ## Overview  
-SavorSync is an interactive web platform designed for food lovers who want to explore world cuisines, discover cultural cooking tips, and find delicious recipes. It’s built to make cultural learning through food more accessible and engaging.  
+SavorSync is an interactive web platform designed for food lovers who want to explore world cuisines, discover cultural cooking tips, and find delicious recipes. It's built to make cultural learning through food more accessible and engaging.  
 
-The project started as part of an **API integration assignment**, but instead of just calling an API for a basic response, it became a fun way to learn about different food traditions, flavors, and cooking techniques from around the world.  
+The project features a modern, responsive interface with smooth animations and interactive elements that guide users through different culinary experiences. From the initial "Hello World" welcome animation to the comprehensive recipe browsing system, SavorSync offers a complete cooking journey.
 
 ---
 
 ## How It Works  
 
-SavorSync makes exploring world cuisines fun and interactive. When you land on the homepage, you’re greeted with a smooth typing animation that sets the tone for your journey. A simple click on the Cultural Cooking Tips button generates an AI-powered “Hello World” message with a cultural twist, introducing you to traditional ingredients, cooking customs, or unique flavors from around the world. The Trending Recipes section highlights popular cuisines like Asian, Italian, and Mediterranean, while the Recipe Search feature allows you to browse dishes by selecting a cuisine from the dropdown menu. Right now, the AI-generated cooking insights are fully functional, while other UI elements—like the recipe search and trending recipes—are visually designed but do not yet fetch real data. Future updates will focus on making these features fully interactive.
+SavorSync provides a rich, interactive experience for exploring world cuisines:
 
-The goal is to help people not just discover new dishes, but also understand the cultural significance behind them. In a world that’s becoming more connected, food is a way to bring people together. Learning about global cuisines through an interactive platform like SavorSync can help users develop a deeper appreciation for cultural diversity.
+1. **Welcome Experience**
+   - Animated "Hello World" welcome message
+   - Smooth typing effect for the main heading
+   - Quick start modal for personalized recipe suggestions
 
-This project is also a step toward future applications in food technology, cultural education, and user experience design. Whether it’s enhancing AI-driven food recommendations, improving digital learning platforms, or expanding into personalized culinary experiences, SavorSync lays the foundation for combining technology with cultural storytelling in a meaningful way.
+2. **Navigation System**
+   - Clean navigation bar with logo and menu items
+   - Quick access to Trending Recipes, Cultural Spotlight, and Community sections
+   - Icon-based navigation for Favorites, Search, and User Profile
+
+3. **Recipe Discovery**
+   - Browse recipes by cuisine categories (Asian, Mediterranean, Latin, American)
+   - Detailed recipe views with multiple display modes:
+     - Minimalist view for quick reference
+     - Cultural Story mode for historical context
+     - Health-Conscious mode for dietary alternatives
+     - Authentic mode for traditional methods
+     - Accessible mode for easy substitutes
+
+4. **Cultural Learning**
+   - Cultural Spotlight section with video content
+   - AI-powered cultural insights for recipes
+   - Historical context and traditional methods
+
+5. **Community Features**
+   - User profiles with activity tracking
+   - Recipe favorites and saved items
+   - Social sharing and interaction
 
 ---
 
 ## Documentation: How This Project Was Built  
 
-### Setting Up the API on Render  
-The backend is a **Node.js + Express API** that generates cultural cooking insights using OpenAI’s GPT model. To make it accessible, the API was deployed on **Render**. Here’s what was done:  
-1. Created an **Express backend** to handle API requests.  
-2. Integrated **OpenAI’s GPT API** to generate cooking insights.  
-3. **Enabled CORS** so the frontend could fetch data from the API.  
-4. Deployed the backend on **Render** with this live endpoint: https://cs5340-hci-savorsync.onrender.com/generate
+### Frontend Architecture
+The application is built using:
+- React + TypeScript for robust type safety
+- CSS modules for styling
+- Bootstrap Icons for consistent iconography
+- Google Fonts for typography
+- Responsive design principles
 
-### How the Frontend and Backend Communicate
-When a user clicks the button for a Cultural Cooking Tip, the frontend sends a request to the backend at /generate. The backend then fetches a response from OpenAI’s API, processes the data, and sends it back to the frontend, which displays the AI-generated cooking insight. This interaction allows the platform to deliver dynamic, personalized content rather than just static text.
+### Key Components
+1. **Main App Component**
+   - Manages global state and navigation
+   - Handles animations and transitions
+   - Controls modal displays and section switching
 
-### Building the Frontend with React
+2. **Recipe Components**
+   - CuisineOverview for browsing recipes
+   - RecipeView for detailed instructions
+   - QuickStart for personalized suggestions
 
-The frontend was built using React + Vite for a fast and modern experience. Here’s what was implemented:
-1.	A smooth welcome animation with a typing effect.
-2.	A searchable dropdown for selecting different world cuisines.
-3.	A button for AI-generated cooking tips.
-4.	CSS styling for a clean and engaging user interface.
+3. **Feature Components**
+   - CulturalSpotlight for cultural content
+   - Community for social features
+   - SearchPage for recipe discovery
+   - UserProfile for personal management
 
-To ensure the AI responses were handled properly, a loading message was added before displaying results.
+### State Management
+- Uses React's useState and useEffect hooks
+- Manages multiple view states and user interactions
+- Handles animations and transitions smoothly
 
 ### Deploying on Netlify
-Once the frontend and backend were working, the next step was deploying the project online.
-Netlify was used to host the frontend, but initially, it failed because the frontend was inside savorsync-api/savorsync-frontend.
+The frontend is deployed on Netlify with the following configuration:
+- Base directory: (Left empty)
+- Build command: cd savorsync-frontend && npm install && npm run build
+- Publish directory: savorsync-frontend/dist
 
-To fix this, the Netlify build settings were updated:
-	•	Base directory: (Left empty)
-	•	Build command: cd savorsync-frontend && npm install && npm run build
-    •   Publish directory: savorsync-frontend/dist
-
-After adjusting these settings, the deployment was successful, and SavorSync went live at: **https://cs5340-hci-savorsync.netlify.app/**
-
-
-### Code Structure & Documentation
-The backend logic is handled in server.js, where the API request is processed, and CORS is configured. The frontend’s main logic is in App.tsx, where the AI-generated content is fetched and displayed. Inline comments are included in these files to explain key functions and how they interact.
----
-
-## Reflection: 
-This mini coding assignment is a valuable experience in building a full-stack application, integrating APIs, and solving real-world deployment issues.
-
-One of the biggest things I learned from this project is how APIs bring a website to life. Instead of just displaying static content, using OpenAI’s API allowed me to generate unique cultural cooking insights on the fly, which made the experience feel more interactive. I also got hands-on experience with how the frontend and backend communicate, and I realized that even small errors in how they connect can break everything. Debugging CORS issues was a huge struggle—at first, my frontend couldn’t even talk to my own backend—but once I figured out how to configure headers and deployment settings, everything finally started working. Setting up Netlify and Render was also a learning curve since they each have their own quirks, but getting them to work together was super satisfying.
-
-One of the most frustrating challenges was fixing CORS errors—I had no idea how much of a blocker that could be until my API just refused to connect. I had to tweak backend settings, redeploy multiple times, and test over and over before it finally worked. Another issue was handling AI responses—sometimes OpenAI would generate way too much text or include unnecessary phrases, so I had to clean up the responses to make them short and useful. I also realized that UI details matter a lot—at first, when users clicked the button, nothing happened right away, which made the app feel broken. Adding a simple “Generating…” message made a huge difference in making the experience feel smooth and professional.
-
-If I were to take this project further, I’d love to add more cultural insights, like a short history of each dish instead of just quick cooking tips. It would also be great to let users save their favorite recipes, so they can come back to them later. Right now, most of the UI elements—like buttons and the navigation system—are just visually set up but not fully functional, except for the AI-generated cooking insights. Based on feedback from the user survey, people wanted a clearer way to navigate through different cuisines and recipes. In future updates, I’d like to improve the navigation system to guide users through not just cuisine categories, but also in-depth cooking instructions and meal suggestions. One of the biggest improvements would be connecting to a real recipe API, so users could get step-by-step cooking instructions rather than just general cultural insights. Right now, SavorSync is a fun way to learn about world food traditions, but with these additions, it could become an even better tool for helping people actually cook and experience global cuisine firsthand.
-
-What started as a simple “Hello World” API integration turned into an interactive global food discovery platform. It was exciting to see how different tools—React, Express, OpenAI, and Netlify—came together to build something meaningful.
+The application is live at: **https://cs5340-hci-savorsync.netlify.app/**
 
 ---
 
 ## Running the Project Locally
+
 1. Clone the Repository:
-• **git clone https://github.com/XinjieShen121/CS5340-HCI-SavorSync.git**
-• **cd CS5340-HCI-SavorSync**
+```bash
+git clone https://github.com/XinjieShen121/CS5340-HCI-SavorSync.git
+cd CS5340-HCI-SavorSync
+```
 
-2. Start the Backend:
-• **cd savorsync-api**
-• **npm install**
-• **node server.js**
-The API will run at http://localhost:3000/generate.
+2. Start the Frontend:
+```bash
+cd savorsync-frontend
+npm install
+npm run dev
+```
 
-3. Start the Frontend:
-• **cd savorsync-frontend**
-• **npm install**
-• **npm run dev**
+The application will be available at http://localhost:5173
+
+---
+
+## Reflection
+This project demonstrates the power of combining modern web technologies to create an engaging user experience. The focus on cultural education through food creates a unique value proposition, while the clean, intuitive interface makes learning about different cuisines accessible and enjoyable.
+
+Key learnings include:
+1. The importance of smooth animations and transitions in user experience
+2. The value of responsive design in modern web applications
+3. The effectiveness of component-based architecture in React
+4. The impact of thoughtful UI/UX design on user engagement
+
+Future improvements could include:
+1. Backend integration for recipe data management
+2. User authentication and profile management
+3. Social features and community interactions
+4. Additional cultural content and video resources
+5. Mobile app version for on-the-go access
+
+What started as a simple interface has evolved into a comprehensive platform for cultural culinary exploration, demonstrating how technology can enhance our understanding and appreciation of global food traditions.
