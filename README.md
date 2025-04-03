@@ -104,7 +104,13 @@ The application will be available at http://localhost:5173
 ---
 
 ## Reflection
-This project demonstrates the power of combining modern web technologies to create an engaging user experience. The focus on cultural education through food creates a unique value proposition, while the clean, intuitive interface makes learning about different cuisines accessible and enjoyable.
+This project gave me the chance to explore how thoughtful design can turn a simple interface into something meaningful and engaging. From the start, my goal with SavorSync was to help users learn about global cuisines, not just through recipes, but through the stories and culture behind the food. Based on feedback from early survey responses, users were most interested in learning about why certain ingredients or cooking methods are used, but often felt overwhelmed when too much text was shown. That insight directly influenced the decision to focus on short, friendly AI-generated cooking tips and clean, digestible UI sections.
+
+I also learned just how much small design choices, like animations, button placement, and visual spacing—can impact how intuitive an interface feels. Even adding a simple “Generating…” loading message helped make the interaction feel smoother and more trustworthy. Using a component-based design in React allowed me to quickly iterate and test layout changes based on those user insights.
+
+Looking ahead, I’d love to build on this by adding real recipe content, cultural spotlight videos, and even community features where users can share their own cooking stories. Many users from the initial survey mentioned wanting a sense of connection—not just to the culture, but to other people learning and cooking along with them. I think that’s a powerful direction for SavorSync to grow.
+
+What began as a basic “Hello World” app turned into a creative way to connect people through food and culture. And that, to me, is what good design is all about—making people feel curious, included, and inspired.
 
 Key learnings include:
 1. The importance of smooth animations and transitions in user experience
@@ -117,6 +123,7 @@ Future improvements could include:
 2. User authentication and profile management
 3. Social features and community interactions
 4. Additional cultural content and video resources
-5. Mobile app version for on-the-go access
+5. Music mode integration
+6. AI Ingredient Swap functionalify integration
 
 What started as a simple interface has evolved into a comprehensive platform for cultural culinary exploration, demonstrating how technology can enhance our understanding and appreciation of global food traditions.
