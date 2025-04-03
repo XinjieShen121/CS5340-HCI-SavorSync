@@ -13,7 +13,7 @@ const bibimbapImage = "https://images.unsplash.com/photo-1512058564366-18510be2d
 const greekSaladImage = "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=800&auto=format&fit=crop&q=60";
 const tacosImage = "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&auto=format&fit=crop&q=60";
 const cevicheImage = "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=800&auto=format&fit=crop&q=60";
-const applePieImage = "https://images.unsplash.com/photo-1621743478914-4b796d8e0f94?w=800&auto=format&fit=crop&q=60";
+const applePieImage = "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=800&auto=format&fit=crop&q=60";
 const bbqPorkImage = "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format&fit=crop&q=60";
 
 // Update OpenAI API configuration
